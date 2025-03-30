@@ -1,0 +1,52 @@
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { FaTwitter, FaTelegram } from "react-icons/fa";
+import { motion } from "framer-motion";
+
+export default function PutinCoinSite() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center p-6">
+      <motion.h1 className="text-5xl font-bold mt-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        $PUTIN – The Power Play of Memecoins
+      </motion.h1>
+      
+      <p className="mt-4 text-lg text-gray-300 text-center max-w-2xl">
+        Join the unstoppable force of $PUTIN! A memecoin with strength, dominance, and the potential to conquer the crypto market.
+      </p>
+      
+      <Button className="mt-6 bg-yellow-500 text-black px-6 py-3 text-lg rounded-2xl hover:bg-yellow-600" onClick={() => window.open('https://dex.example.com', '_blank')}>
+        Buy $PUTIN Now
+      </Button>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+        <Card>
+          <CardContent className="p-6 text-center">
+            <h2 className="text-2xl font-bold">🔥 Massive Hype</h2>
+            <p className="text-gray-300 mt-2">Join the strongest crypto army. This is not just a meme—it's a movement.</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-6 text-center">
+            <h2 className="text-2xl font-bold">🚀 Moon Mission</h2>
+            <p className="text-gray-300 mt-2">$PUTIN is designed for rapid growth. Get in before it's too late.</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-6 text-center">
+            <h2 className="text-2xl font-bold">💰 Community Power</h2>
+            <p className="text-gray-300 mt-2">The $PUTIN community is what drives this token to the top.</p>
+          </CardContent>
+        </Card>
+      </div>
+      
+      <div className="flex space-x-6 mt-12">
+        <a href="https://twitter.com/putincoin" target="_blank" rel="noopener noreferrer">
+          <FaTwitter className="text-3xl hover:text-blue-400 transition duration-300" />
+        </a>
+        <a href="https://t.me/putincoin" target="_blank" rel="noopener noreferrer">
+          <FaTelegram className="text-3xl hover:text-blue-300 transition duration-300" />
+        </a>
+      </div>
+    </div>
+  );
+}
